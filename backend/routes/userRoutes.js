@@ -19,7 +19,5 @@ router.get('/profile', protect, checkPatient, async (req, res) => {
   }
 });
 
-// backend/routes/userRoutes.js
-router.get('/patients', getAllPatients);  // Ensure this route exists
 
 module.exports = router;
