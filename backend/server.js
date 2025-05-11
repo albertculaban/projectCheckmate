@@ -18,7 +18,11 @@ const app = express();
 dotenv.config();
 
 // Middleware
-app.use(cors());  // To allow cross-origin requests
+app.use(cors({
+  origin: 'https://project-checkmate-9cbr.vercel.app/',  // Replace with your Vercel frontend URL
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  credentials: true,
+}));;  // To allow cross-origin requests
 app.use(express.json());  // To parse JSON requests
 
 // Use routes

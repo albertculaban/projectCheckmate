@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = '/api'; // ✅ Relative path that works in both dev & prod
+const API_URL = process.env.REACT_APP_API_URL; // ✅ Relative path that works in both dev & prod
 
 export const registerUser = async (userData) => {
   const response = await axios.post(`${API_URL}/auth/register`, userData);
