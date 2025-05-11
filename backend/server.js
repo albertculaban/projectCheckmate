@@ -17,12 +17,13 @@ const userRoutes = require('./routes/userRoutes');
 const app = express();
 dotenv.config();
 
+const corsOptions = {
+  origin: 'https://project-checkmate-9cbr.vercel.app', // ✅ NO trailing slash
+  credentials: true, // If you plan to use cookies or auth headers
+};
+app.use(cors(corsOptions));
+
 // Middleware
-app.use(cors({
-  origin: 'https://project-checkmate-9cbr.vercel.app/',  // Replace with your Vercel frontend URL
-  methods: ['GET', 'POST', 'PUT', 'DELETE'],
-  credentials: true,
-}));;  // To allow cross-origin requests
 app.use(express.json());  // To parse JSON requests
 
 // Use routes
