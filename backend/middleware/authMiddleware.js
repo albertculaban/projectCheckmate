@@ -15,10 +15,12 @@ const protect = async (req, res, next) => {
   try {
     const decoded = jwt.verify(token, process.env.JWT_SECRET);
     req.user = await User.findById(decoded.id).select('-password'); // Attach user data to the request
+    console.log('Decoded User:', req.user);  // Debugging line to check the user data
     next(); // Pass to the next middleware
   } catch (err) {
     res.status(401).json({ message: 'Token is not valid' });
   }
 };
+
 
 module.exports = { protect };
