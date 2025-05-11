@@ -72,7 +72,7 @@ function PatientDashboard() {
         const result = await getHealthLogs();
         setLogs(result);
       } catch (err) {
-        setAlertMessage('Failed to load health logs');
+        console.log('Failed to load health logs');
       }
     };
     fetchLogs();
