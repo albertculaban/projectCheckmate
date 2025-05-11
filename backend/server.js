@@ -36,7 +36,7 @@ app.use('/Videos', express.static(path.join(__dirname, 'Videos')));
 app.use(express.static(path.join(__dirname, 'build')));
 
 // Fallback for React routing (e.g., /dashboard, /login)
-app.get('*', (req, res) => {
+app.get('/*splat', (req, res) => {
   res.sendFile(path.join(__dirname, 'build', 'index.html'));
 });
 
