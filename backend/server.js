@@ -17,11 +17,22 @@ const userRoutes = require('./routes/userRoutes');
 const app = express();
 dotenv.config();
 
-const corsOptions = {
-  origin: 'https://project-checkmate-9cbr.vercel.app', // ✅ NO trailing slash
-  credentials: true, // If you plan to use cookies or auth headers
-};
-app.use(cors(corsOptions));
+const allowedOrigins = [
+  'https://project-checkmate-9cbr.vercel.app',
+  'https://project-checkmate-9cbr-git-main-culabanmacalberts-projects.vercel.app'
+];
+
+app.use(cors({
+  origin: function (origin, callback) {
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  },
+  credentials: true
+}));
+
 
 // Middleware
 app.use(express.json());  // To parse JSON requests
