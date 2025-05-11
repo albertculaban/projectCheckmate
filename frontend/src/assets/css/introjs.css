@@ -1,0 +1,10 @@
+/* Example: Customizing the Intro.js Tooltip */
+.introjs-tooltip {
+  background-color: #2c3e50 !important;  /* Custom color */
+  color: white !important;
+}
+
+.introjs-helperLayer {
+  background-color: rgba(0, 0, 0, 0.5);  /* Dimmed overlay */
+}
+

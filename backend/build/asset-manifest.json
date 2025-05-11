@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/static/css/main.d9c2b094.css",
+    "main.js": "/static/js/main.555585d6.js",
+    "static/js/453.d855a71b.chunk.js": "/static/js/453.d855a71b.chunk.js",
+    "static/media/hospital1.jpg": "/static/media/hospital1.f477d387ff7b54bdc353.jpg",
+    "static/media/nurse.jpg": "/static/media/nurse.e7a1fcec395345e1af0d.jpg",
+    "index.html": "/index.html",
+    "main.d9c2b094.css.map": "/static/css/main.d9c2b094.css.map",
+    "main.555585d6.js.map": "/static/js/main.555585d6.js.map",
+    "453.d855a71b.chunk.js.map": "/static/js/453.d855a71b.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d9c2b094.css",
+    "static/js/main.555585d6.js"
+  ]
+}

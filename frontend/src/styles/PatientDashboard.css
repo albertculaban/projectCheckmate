@@ -1,0 +1,168 @@
+.dashboard-container {
+  min-height: 100vh;
+  padding: 40px 5%;
+  background-image: url('/public/assets/hospital1.jpg'); /* ✅ Corrected path */
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  color: #fff;
+  font-family: 'Segoe UI', sans-serif;
+  width: 100%;
+}
+
+
+.dashboard-header {
+  font-family: Georgia, serif;
+  font-size: 100px;
+  text-align: left;
+  margin-bottom: 2rem;
+  color: white;
+  margin-top: -20px;
+}
+
+.dashboard {
+  font-family: Georgia, serif;
+  font-size: 40px;
+  text-align: left;
+  padding-top: 150px; /* Moves it closer to vertical center */
+  color: white
+}
+
+.feature-card {
+  background: rgba(255, 255, 255, 0.15); /*semi-transparent white background */
+  backdrop-filter: blur(10px);           /* Apply the blur effect behind the card */
+  -webkit-backdrop-filter: blur(10px);   /* for Safari support */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Slight border to help with the effect */
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37); /* Drop shadow to make the card stand out */
+  border-radius: 15px; /* Rounded corners */
+  color: white;
+  transition: all 0.3s ease-in-out; /* Smooth transition for hover */
+}
+
+.feature-card:hover {
+  background: rgba(255, 255, 255, 0.25); /* Slightly increase opacity on hover */
+  transform: scale(1.02); /* Slight scale effect on hover */
+}
+
+.feature-card .card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.feature-card .card-text {
+  font-size: 0.95rem;
+  color: #555; /* Slightly lighter text color */
+}
+
+.introjs-tooltip .tour-step {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.introjs-tooltip .ai-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.introjs-tooltip p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+.summary-section {
+  width: 58%; /* or match the card width visually */
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+
+.summary-section h4 {
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+.summary-item {
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+
+.card-wrapper {
+  flex: 0 0 22%; /* Adjust width to fit 4 with spacing */
+}
+
+.ai-assistant-avatar {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  z-index: 999;
+  transition: transform 0.3s ease;
+}
+
+.ai-assistant-avatar:hover {
+  transform: scale(1.05);
+}
+
+.ai-chatbox {
+  position: fixed;
+  bottom: 450px;
+  right: 100px;
+  width: 300px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  backdrop-filter: blur(8px);
+}
+
+.chat-header {
+  background-color: #4a5568;
+  color: white;
+  padding: 12px;
+  font-weight: bold;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.chat-body {
+  padding: 15px;
+  font-size: 14px;
+  color: #333;
+  flex: 1;
+  overflow-y: auto;
+}
+
+.chat-footer {
+  padding: 10px;
+  border-top: 1px solid #ccc;
+}
+
+.chat-footer input {
+  width: 100%;
+  padding: 8px;
+  border-radius: 8px;
+  border: none;
+}
+
+.logout-container {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  z-index: 100;
+}
